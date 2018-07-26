@@ -1,4 +1,7 @@
 
+A sample project to test sortable inlines in Django admin with django_admin_sortable2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Use case
 ========
 
@@ -13,11 +16,11 @@ Screenshots
 
 Panel editing: buttons inlines are sortable
 
-.. image:: etc/buttons_inline.png
+.. image:: etc/screenshots/buttons_inline.png
 
 Button editing: panels inlines are not
 
-.. image:: etc/panels_inline.png
+.. image:: etc/screenshots/panels_inline.png
 
 
 
