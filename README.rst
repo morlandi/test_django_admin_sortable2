@@ -23,11 +23,20 @@ Button editing: panels inlines are not
 .. image:: etc/screenshots/panels_inline.png
 
 
+fixes for django-bootstrap-admin
+--------------------------------
+
+- the buttons for moving items to other pages do not behave as expected
+  with boostrap_admin; here, we just hide them (see "backend/templates/admin/base_side.html"),
+  and make sure that object listing uses a single page (list_per_page = 1000)
+
+- no adjustments are required for inlines sorting
+
 
 References
 ==========
 
-    - `django-admin-sortable2 <https://django-admin-sortable2.readthedocs.io/en/latest/index.html>`_
+    - `django-admin-sortable2 <https://github.com/jrief/django-admin-sortable2>`_
 
 
 **Excerpt from django-admin-sortable2 docs:**
