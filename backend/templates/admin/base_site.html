@@ -1,0 +1,23 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+
+{% block extrastyle %}
+
+<style>
+
+/* hide buttons for moving items to other pages, as they do not fit bootstrap_admin */
+#changelist .actions .input-group:not(:first-child) {
+    display: none;
+}
+
+</style>
+
+{% endblock %}

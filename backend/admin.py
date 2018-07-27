@@ -1,4 +1,5 @@
 from django.contrib import admin
+from adminsortable2.admin import SortableAdminMixin
 from adminsortable2.admin import SortableInlineAdminMixin
 from .models import Button
 from .models import Panel
@@ -20,9 +21,12 @@ class PanelTabularInline(admin.TabularInline):
 
 
 @admin.register(Panel)
-class PanelAdmin(admin.ModelAdmin):
+class PanelAdmin(SortableAdminMixin, admin.ModelAdmin):
     inlines = (ButtonTabularInline,)
     search_fields = ['name', ]
+
+    # make sure all panels are in one page, for easier sorting
+    list_per_page = 1000
 
 
 @admin.register(Button)

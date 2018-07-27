@@ -14,6 +14,10 @@ class Panel(models.Model):
     """A Panel of Buttons - this represents a control panel."""
     name = models.CharField(max_length=64)
     buttons = models.ManyToManyField(Button, through='PanelButtons')
+    position = models.PositiveIntegerField(null=False, blank=False, default=0)
+
+    class Meta(object):
+        ordering = ['position', ]
 
     def __str__(self):
         return self.name

@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'backend',
     'bootstrap_admin',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'adminsortable2',
-    'backend',
 ]
 
 MIDDLEWARE = [
